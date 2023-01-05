@@ -25,7 +25,7 @@ function App() {
   async function getWeather(e) {
     e.preventDefault();
     try{
-      let api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+      let api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
       let data = await api_call.json();
 
       if (data) {
