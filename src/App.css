@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+  font-family: "Open Sans", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  background: linear-gradient(to right, #4e1980, #a727ab);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper.lightMode{
+  background: linear-gradient(to right, #3361AC, #2cb9af);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  height: 96vh;
+  border-top: solid 3vh #F9982A;
+  background: #F9982A;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 79%;
+  margin: 0 auto;
+}
+
+.main.lightMode {
+  border-top: solid 3vh #162F65;
+  background: #162F65;
+}
+
+.title-container {
+  height: 90vh;
+  background: url("img/dusk.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+
+  flex-direction: row;
+  align-items: flex-start;
+
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.title-container.lightMode {
+  height: 90vh;
+  background: url("img/dawn.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.form-container {
+  background-color: #3C2367;
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.form-container.lightMode {
+  background-color: #E8AF30;
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.inputField {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px #F9982A;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #EDE7E3;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+.inputField.lightMode {
+  border-bottom: solid 2px #E8C766;
+  color: #3361AC
+}
+
+.submitButton {
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #F9982A;
+  color: #EDE7E3;
+  font-weight: 100;
+}
+
+.submitButton.lightMode {
+  background-color: #162F65;
+}
+
+button:active {
+  outline: none;
+}
+
+
+.darkSwitch {
+  background-color: #3C2367;
+  color: #EDE7E3;
+  position: absolute;
+  left: 38vw;
+  top: 81vh;
+}
+
+.darkSwitch.lightMode {
+  background-color: #E8AF30;
+}
+
+
+/* Toggle button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eae9e2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #eae9e2;
+  background-image: url("./img/sun.png");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #221042;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #221042;
+  background-image: url("./img/moon.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

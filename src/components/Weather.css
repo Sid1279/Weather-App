@@ -1,0 +1,30 @@
+.info {
+    width: 60%;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+  
+.key {
+    color: #F9982A;
+    border-bottom: solid 2px #F9982A;
+    padding: 20px 0 20px 0;
+    font-weight: 400;
+  }
+
+  .key.lightMode {
+    color: #162F65;
+    border-bottom: solid 2px #E8C766;
+    padding: 20px 0 20px 0;
+    font-weight: 400;
+  }
+
+.value {
+    color: #fff;
+    font-weight: 200;
+  }
+
+.value.lightMode {
+    color: #3361AC;
+    font-weight: 200;
+  }
