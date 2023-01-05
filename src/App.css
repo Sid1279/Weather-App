@@ -117,15 +117,11 @@ button:active {
 
 
 .darkSwitch {
-  background-color: #3C2367;
+  background-color:rgba(0, 0, 0, 0);
   color: #EDE7E3;
   position: absolute;
   left: 38vw;
   top: 81vh;
-}
-
-.darkSwitch.lightMode {
-  background-color: #E8AF30;
 }
 
 

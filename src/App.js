@@ -28,7 +28,7 @@ function App() {
       let api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
       let data = await api_call.json();
 
-      if (data) {
+      if (city && country) {
         setState({
           temperature: data.main.temp,
           city: data.name,
