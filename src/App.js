@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import Title from "./components/Title";
 import Weather from "./components/Weather";
 
-const API_KEY = "7a151e2b62bde7ceca44bc5605a8ba95";
+const API_KEY = "________________________";
 
 
 function App() {
