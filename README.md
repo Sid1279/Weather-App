@@ -57,5 +57,5 @@ After publishing, your app will be deployed to Cloudflare Pages and accessible v
 
 Feel free to modify the code and customize the app based on your preferences. Add additional styling, error handling, or features to enhance the user experience :)
 
-## Website link: 
+## Website link
 https://weatherdisplay.pages.dev/
